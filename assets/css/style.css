@@ -1,0 +1,211 @@
+/* assets/css/style.css */
+:root {
+    --primary-color: #007bff; /* Updated to match the specific blue in your image */
+    --secondary-color: #ff9800;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    --border-radius: 4px;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(25, 25, 25, 0.95); /* Making navbar dark to blend with hero */
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /* Overlays on top of the hero image */
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* --- NEW HOME PAGE HERO --- */
+.home-hero {
+    position: relative;
+    /* Dark overlay + background image */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1920&q=80') center top/cover no-repeat;
+    height: 60vh;
+    background-position: center 25%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: var(--white);
+    margin-bottom: 5rem;
+}
+
+.home-hero-content {
+    max-width: 600px;
+}
+
+.home-hero h1 {
+    font-size: 4.5rem; /* Large typography like the image */
+    line-height: 1.2;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.highlight-blue {
+    color: #5b9bf8; /* Specific blue for text */
+}
+
+/* Floating Search Bar */
+.search-wrapper {
+    position: absolute;
+    bottom: -35px; /* Pulls it down over the edge */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-search-container {
+    width: 90%;
+    max-width: 800px;
+    background: var(--white);
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hero-search-container input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    color: var(--text-dark);
+}
+
+.hero-search-container button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero-search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Recent Jobs Section */
+.recent-jobs-section {
+    padding: 2rem 5% 4rem;
+    text-align: center;
+}
+
+.jobs-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    max-width: 1100px; 
+    margin: auto; 
+    text-align: left;
+}
+
+.job-card {
+    background: var(--white); 
+    padding: 2rem; 
+    border-radius: var(--border-radius); 
+    box-shadow: var(--box-shadow); 
+    border-top: 4px solid var(--primary-color);
+}
+
+.badge {
+    padding: 6px 12px; 
+    border-radius: 4px; 
+    font-size: 0.85rem; 
+    font-weight: bold; 
+    display: inline-block;
+}
+
+.badge-type {
+    background: #e0f7fa; 
+    color: #006064; 
+    margin-right: 8px;
+}
+
+.badge-category {
+    background: #f1f8e9; 
+    color: #33691e;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(25, 25, 25, 0.98); 
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Changed from absolute to sticky */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
